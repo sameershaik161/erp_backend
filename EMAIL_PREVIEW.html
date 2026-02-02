@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Email Preview - Student Achievement Portal</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f0f0;
+      padding: 20px;
+    }
+    .preview-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .preview-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .email-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
+    @media (max-width: 768px) {
+      .email-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    .email-preview {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    .email-label {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    /* Email styles */
+    .container { max-width: 600px; margin: 0 auto; }
+    .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
+    .content { background: #f9f9f9; padding: 30px; border-radius: 0 0 10px 10px; }
+    .success-badge { background: #10b981; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin: 20px 0; font-weight: bold; }
+    .warning-badge { background: #ef4444; color: white; padding: 10px 20px; border-radius: 5px; display: inline-block; margin: 20px 0; font-weight: bold; }
+    .details { background: white; padding: 20px; border-radius: 8px; margin: 20px 0; }
+    .details.approved { border-left: 4px solid #667eea; }
+    .details.rejected { border-left: 4px solid #ef4444; }
+    .footer { text-align: center; color: #666; margin-top: 30px; font-size: 12px; }
+    .points { font-size: 24px; color: #667eea; font-weight: bold; }
+    .action-box { background: #fef3c7; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #f59e0b; }
+  </style>
+</head>
+<body>
+  <div class="preview-container">
+    <div class="preview-header">
+      <h1>📧 Email Notification Preview</h1>
+      <p>Student Achievement Portal - Official Communications</p>
+    </div>
+
+    <div class="email-grid">
+      <!-- Approval Email -->
+      <div class="email-preview">
+        <div class="email-label">✅ APPROVAL EMAIL</div>
+        <div class="container">
+          <div class="header">
+            <h1>🎓 Student Achievement Portal</h1>
+            <p>Official Communication from Administration</p>
+          </div>
+          <div class="content">
+            <h2>Dear Rahul Sharma,</h2>
+            <div class="success-badge">✅ CERTIFICATE APPROVED</div>
+            <p>Congratulations! We are pleased to inform you that your certificate submission has been reviewed and <strong>approved</strong> by the administration.</p>
+            
+            <div class="details approved">
+              <h3>📋 Achievement Details:</h3>
+              <p><strong>Title:</strong> Web Development Bootcamp Completion</p>
+              <p><strong>Points Awarded:</strong> <span class="points">50 points</span></p>
+              <p><strong>Admin Note:</strong> Excellent certificate from a reputed organization. Keep it up!</p>
+            </div>
+
+            <p>These points have been added to your total score and will be reflected on your profile and the leaderboard.</p>
+            
+            <p>Keep up the excellent work! Continue submitting your achievements to earn more recognition and points.</p>
+
+            <p>Best regards,<br>
+            <strong>Administration Team</strong><br>
+            Student Achievement Portal</p>
+          </div>
+          <div class="footer">
+            <p>This is an automated message from the Student Achievement Portal. Please do not reply to this email.</p>
+            <p>© 2024 Student Achievement Portal. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Rejection Email -->
+      <div class="email-preview">
+        <div class="email-label">❌ REJECTION EMAIL</div>
+        <div class="container">
+          <div class="header">
+            <h1>🎓 Student Achievement Portal</h1>
+            <p>Official Communication from Administration</p>
+          </div>
+          <div class="content">
+            <h2>Dear Priya Patel,</h2>
+            <div class="warning-badge">❌ CERTIFICATE NOT APPROVED</div>
+            <p>We have reviewed your certificate submission. Unfortunately, we are unable to approve it at this time.</p>
+            
+            <div class="details rejected">
+              <h3>📋 Submission Details:</h3>
+              <p><strong>Title:</strong> Online Course Certificate</p>
+              <p><strong>Reason for Rejection:</strong><br>The certificate image is not clear. Please upload a higher quality scan or photo of the certificate.</p>
+            </div>
+
+            <div class="action-box">
+              <h3>📝 What to do next?</h3>
+              <p>Please review the reason provided above and:</p>
+              <ul>
+                <li>Ensure your certificate meets all the required criteria</li>
+                <li>Upload clear and legible proof documents</li>
+                <li>Provide accurate and complete information</li>
+                <li>Resubmit your achievement after making necessary corrections</li>
+              </ul>
+            </div>
+
+            <p>If you have any questions or need clarification, please contact the administration office.</p>
+
+            <p>Thank you for your understanding.</p>
+
+            <p>Best regards,<br>
+            <strong>Administration Team</strong><br>
+            Student Achievement Portal</p>
+          </div>
+          <div class="footer">
+            <p>This is an automated message from the Student Achievement Portal. Please do not reply to this email.</p>
+            <p>© 2024 Student Achievement Portal. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; padding: 20px; background: white; border-radius: 10px;">
+      <h2>📝 How to Test</h2>
+      <ol style="text-align: left; max-width: 600px; margin: 0 auto;">
+        <li>Configure EMAIL_USER and EMAIL_PASSWORD in your .env file</li>
+        <li>Restart your backend server</li>
+        <li>Login as admin and approve/reject a certificate</li>
+        <li>Check the student's email inbox</li>
+      </ol>
+      <p style="margin-top: 20px;">
+        <strong>Note:</strong> These are preview templates. Actual emails will include dynamic data from your system.
+      </p>
+    </div>
+  </div>
+</body>
+</html>
