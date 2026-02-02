@@ -7,6 +7,12 @@ node_modules/
 # !api/
 
 # Environment variables (IMPORTANT: Never commit .env files)
+.env
+.env.local
+.env.*.local
+
+# Keep the example file for reference
+!.env.example
 
 
 
